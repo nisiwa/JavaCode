@@ -1,0 +1,40 @@
+1. 多线程有几种实现方案，分别是哪几种?
+	两种(三种)
+	a. 继承Thread类
+	b. 实现Runnable接口
+	//c. 线程池 Executors -- ExcutorService -- submit(...) -- Callable -- Future -- get()
+
+2. 同步有几种方式，分别是什么?
+	同步代码块：
+		synchronized(锁) {
+			同步的代码
+		}
+		锁可用是任意对象
+		
+	同步方法：
+		synchronized 放在方法上
+		锁是this对象
+	
+	同步静态方法：
+		synchronized 放在方法上
+		锁是字节码文件对象 .class对象
+	
+	锁(Lock) JDK1.5之后出现
+	Lock -- ReentrantLock
+	
+3. 启动一个线程是run()还是start()?它们的区别?
+	start()
+	run()：封装的线程执行的代码，直接调用相当于单线程调用。
+	start(): JVM会启动一个线程，并执行run()方法。
+	
+4. sleep()和wait()方法的区别
+	sleep(): 线程调用sleep()方法会进入一般阻塞状态，锁不会释放
+	wait()：对象调用wait()方法会进入等待阻塞状态，锁会释放。
+
+5. 为什么wait(),notify(),notifyAll()等方法都定义在Object类中
+	锁是线程之间通信的媒介
+	锁可以是任意对象
+	所以这些方法定义在Object类中
+	
+6. 线程的生命周期图
+	新建 -- 就绪 -- 运行 -- 死亡 -- 一般阻塞 -- 等待阻塞 -- 同步阻塞

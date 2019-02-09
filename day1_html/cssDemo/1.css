@@ -1,0 +1,18 @@
+p{
+    font-size: 100px;
+    background-color: red;
+    color: blue;
+}
+.bgred{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+#id1{
+    width: 120px;
+    height: 100px;
+    background-color: blue;
+}
+body{
+    background-image: url(1.jpg);
+}

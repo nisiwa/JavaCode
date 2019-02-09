@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML DOM</title>
+</head>
+<body>
+<h1>DOM的结构</h1><p><a href="#">链接</a></p><div>我是div</div>
+</body>
+<script>
+    var pnode = document.getElementsByTagName("p")[0];
+    var parentNode = pnode.parentNode;
+    console.log(parentNode);
+    var previousSibling = pnode.previousSibling;
+    console.log(previousSibling);
+    var nextSibling = pnode.nextSibling;// ctrl + alt + v
+    console.log(nextSibling);
+</script>
+<!--<script>
+    console.log(document.nodeName); //#document
+    console.log(document.nodeValue); // null
+    console.log(document.nodeType); //9
+    var h1Node = document.getElementsByTagName("h1")[0];
+    console.log(h1Node.nodeName); //H1
+    console.log(h1Node.nodeValue); // null
+    console.log(h1Node.nodeType); //1
+    var h1child = h1Node.childNodes[0]; //会返回当前元素下所有的子节点
+    var children = h1Node.children; //仅返回当前元素下的非文本子节点
+    alert(children.length); //0
+    console.log(h1child.nodeName); //#text
+    console.log(h1child.nodeValue); //DOM的结构
+    console.log(h1child.nodeType); //3
+    var anode = document.getElementsByTagName("a")[0];
+    var attribute = anode.attributes[0];
+    console.log(attribute.nodeName); //href
+    console.log(attribute.nodeValue); //#
+    console.log(attribute.nodeType); //2
+
+
+
+
+</script>-->
+</html>

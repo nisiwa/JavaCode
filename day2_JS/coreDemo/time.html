@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var id = 0;
+        function move() {
+             id = setInterval(randomMove,1000);
+        }
+        function randomMove() {
+            window.document.getElementById("layer1").style.left = Math.random()*500 + "px";
+            document.getElementById("layer1").style.top = Math.random()*500 + "px";
+
+        }
+        function clear123() {
+            clearInterval(id);
+        }
+    </script>
+    <!--<script>-->
+        <!--function move() {-->
+            <!--document.getElementById("layer1").style.left = Math.random()*500 + "px";-->
+            <!--document.getElementById("layer1").style.top = Math.random()*500 + "px";-->
+            <!--console.log("hello");-->
+            <!--setTimeout(move,1000);-->
+        <!--}-->
+    <!--</script>-->
+</head>
+<body onload="move()">
+<input type="button" value="停止" onclick="clear123()">
+<div  id="layer1" style="position:absolute;">
+    <a href="http://www.cskaoyan.com">
+        <img src="2.jpg" width="150" height="100" border="0"></a>
+</div>
+<h2>随机漂浮的广告</h2>
+
+</body>
+</html>

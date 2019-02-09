@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<iframe src="iframe1.html" id="iframe1"></iframe>
+<iframe src="iframe2.html" name="iframe2"></iframe>
+<div id="div1">
+</div>
+<input type="button" value="获取" onclick="acquire()">
+</body>
+<script>
+    // var frames = window.frames;
+    // console.log(frames);
+    // console.log(window.frames.length); //2
+    // //var elementById = window.frames["iframe1"].document.getElementById("text1");
+    // //window.frames["iframe_ID"].document.getElementById("元素id");
+    // alert(elementById);
+    // console.log(elementById);
+    function acquire() {
+        var elementById = window.frames[0].document.getElementById("text1");
+        console.log(elementById);
+    }
+</script>
+</html>

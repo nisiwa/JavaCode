@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+crud : create r: retrieve  u:update d:delete
+<h1>DOM的结构</h1><p><a id="id3" href="http://www.baidu.com" style="margin-left:20px">链接</a></p><div>我是div</div>
+</body>
+<script>
+    //查找文本或者元素
+    var h1node = document.getElementsByTagName("h1")[0];
+    //var childNode = h1node.childNodes[0];
+    var firstChild = h1node.firstChild;
+    var lastChild = h1node.lastChild;
+    console.log(firstChild.nodeValue);
+    console.log(lastChild.nodeValue);
+   // console.log(childNode.nodeValue);
+    //查找属性
+    var anode = document.getElementsByTagName("a")[0];
+    var attribute = anode.getAttribute("href");
+    console.log(attribute);
+    var href = anode.attributes.getNamedItem("href");
+    console.log(href.value);
+    // var href1 = anode.href;
+    // console.log(href1);
+    // var cssText = anode.style.cssText;
+    // console.log(cssText);
+    // console.log(anode.id);
+    var attribute1 = anode.getAttribute("style");
+    console.log(attribute1);
+    var attribute2 = anode.getAttribute("id");
+    console.log(attribute2);
+</script>
+</html>

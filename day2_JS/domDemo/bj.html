@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li id="bj" value="beijing">
+        北京
+        <h1>海淀</h1>
+        奥运
+    </li>
+    <li id="sh" value="shanghai">
+        上海
+    </li>
+</ul>
+<br/>
+<input type="button" value="li取值" onclick="getLi()"/>
+
+</body>
+<script>
+    function getLi() {
+        var bjnode = document.getElementById("bj");
+        var childNodes = bjnode.childNodes;
+        for(var i = 0;i < childNodes.length;i++){
+            if(childNodes[i].nodeType == 1){//是元素节点
+               console.log( childNodes[i].firstChild.nodeValue);
+               console.log(childNodes[i].innerText);
+            }else if(childNodes[i].nodeType == 3){ //文本节点
+                console.log(childNodes[i].nodeValue);
+            }
+        }
+    }
+</script>
+</html>

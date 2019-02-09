@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<select name="edu" id="edu">
+    <option value="本科">本科----</option>
+    <option value="专科">专科---</option>
+    <option value="高中">高中---</option>
+    <option value="小学">小学---</option>
+    <option value="幼儿园">幼儿园---</option>
+</select>
+
+</body>
+<script>
+    var selectNode = document.getElementById("edu");
+    var childNodes = selectNode.childNodes;
+    for(var i = 0;i < childNodes.length;i++){
+        if(childNodes[i].nodeType == 1){
+           // console.log(childNodes[i].innerText);
+            console.log(childNodes[i].firstChild.nodeValue);
+            //获取属性值
+            console.log(childNodes[i].getAttribute("value"));
+           // console.log(childNodes[i].value);
+        }
+    }
+</script>
+</html>

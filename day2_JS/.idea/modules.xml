@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/coreDemo/11.iml" filepath="$PROJECT_DIR$/coreDemo/11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/coreDemo/111.iml" filepath="$PROJECT_DIR$/coreDemo/111.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bomDemo/bomDemo.iml" filepath="$PROJECT_DIR$/bomDemo/bomDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/coreDemo/coreDemo.iml" filepath="$PROJECT_DIR$/coreDemo/coreDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domDemo/domDemo.iml" filepath="$PROJECT_DIR$/domDemo/domDemo.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" onblur="focusOut()" onfocus="focusIn()" id="text1">
+<input type="button" value="前往"  onclick="goto()" ondblclick="doubleClick()">
+</body>
+<script>
+    function goto(){
+        var valueId = document.getElementById("text1").value;
+        location.href = valueId;
+    }
+    function doubleClick() {
+        alert("双击了按钮");
+    }
+    // function focusIn() {
+    //     alert("获得了焦点");
+    // }
+    function focusOut() {
+       // alert("失去了焦点");
+        var value = document.getElementById("text1").value;
+        if(value.length < 6){
+            alert("长度不足");
+        }
+    }
+    //window.confirm("是否确认删除");
+    //window.prompt("请输入用户名");
+</script>
+</html>

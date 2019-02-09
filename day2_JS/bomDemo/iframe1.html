@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body onload="log()">
+<input type="text" id="text1">
+<input type="button" onclick="sentMSG()" value="提交">
+</body>
+<script>
+    function sentMSG() {
+        var elementById = document.getElementById("text1").value;
+        //console.log(elementById);
+        window.parent.document.getElementById("div1").innerText = elementById
+    }
+    function log() {
+        alert("iframe1加载完成");
+    }
+</script>
+</html>

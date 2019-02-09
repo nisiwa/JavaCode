@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 id="h1">明天休息<span>去逛街吧</span></h1>
+</body>
+<script>
+    var h1node = document.getElementById("h1");
+    var nodeValue = h1node.lastChild.nodeValue;
+    var nodeValue2 = h1node.childNodes[0].nodeValue;
+
+    console.log(nodeValue);
+    console.log(nodeValue2);
+    var innerText = h1node.innerText; //仅显示文本信息
+    console.log(innerText);
+    var innerHTML = h1node.innerHTML; //显示该元素下完整的信息
+    console.log(innerHTML);
+
+</script>
+</html>

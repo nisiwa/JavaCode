@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--通过set方法-->
+    <bean id="user" class="com.cskaoyan.bean.User">
+        <property name="username" value="lzl"/>
+        <property name="password" value="123456"/>
+    </bean>
+    <!--通过构造方法-->
+    <bean id="person" class="com.cskaoyan.bean.Person">
+        <constructor-arg name="personName" value="lzl"/>
+        <constructor-arg name="age" value="12"/>
+    </bean>
+    <bean id="collectData" class="com.cskaoyan.bean.CollectionData">
+        <!--数组-->
+        <property name="arrayData">
+            <array>
+                <value>1</value>
+                <value>2</value>
+                <value>3</value>
+            </array>
+        </property>
+        <!--list-->
+        <property name="listData">
+            <list>
+                <value>4</value>
+                <value>5</value>
+                <value>6</value>
+            </list>
+        </property>
+        <property name="setData">
+            <set>
+                <value type="com.cskaoyan.bean.Person">${person}</value>
+            </set>
+        </property>
+        <property name="mapData">
+            <map>
+                <entry key="key1" value="value1"/>
+                <entry key="key2" value="value2"/>
+                <entry key="key3" value="value3"/>
+            </map>
+        </property>
+        <property name="properties">
+            <props >
+                <prop key="key4">value4</prop>
+                <prop key="key5">value5</prop>
+                <prop key="key6">value6</prop>
+            </props>
+        </property>
+    </bean>
+</beans>
